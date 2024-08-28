@@ -300,7 +300,7 @@ module.exports = grammar({
         /[^"\\]+/,
         /\\[^xu]/,
         /\\u[0-9a-fA-F]{4}/,
-        /\\u{[0-9a-fA-F]+}/,
+        /\\u[0-9a-fA-F]+/,
         /\\x[0-9a-fA-F]{2}/
       )),
       '"'
@@ -314,7 +314,7 @@ module.exports = grammar({
         /[^"\\]+/,
         /\\[^xu]/,
         /\\u[0-9a-fA-F]{4}/,
-        /\\u{[0-9a-fA-F]+}/,
+        /\\u[0-9a-fA-F]+/,
         /\\x[0-9a-fA-F]{2}/
       )),
       '"'
@@ -335,7 +335,7 @@ module.exports = grammar({
     escape_sequence: $ => token.immediate(choice(
         /\\[^xu]/,
         /\\u[0-9a-fA-F]{4}/,
-        /\\u{[0-9a-fA-F]+}/,
+        /\\u[0-9a-fA-F]+/,
         /\\x[0-9a-fA-F]{2}/
     )),
 
